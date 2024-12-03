@@ -1,0 +1,50 @@
+.progress-bar {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 4px;
+    background: linear-gradient(to right, #00f, #0f0, #f00);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: green;
+    border-radius: 5px;
+    width: 0;
+    transition: width 0.1s;
+}
+
+.dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    top: 50%;
+    transition: background 0.3s, border-color 0.3s, transform 0.2s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.dot:hover {
+    background: #aaa;
+    border-color: #0f0;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.dot.active {
+    background: #0f0;
+    border-color: #0f0;
+    transform: translateY(-50%) scale(1.3);
+}
+
